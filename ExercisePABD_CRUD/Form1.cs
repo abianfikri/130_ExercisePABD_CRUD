@@ -175,5 +175,71 @@ namespace ExercisePABD_CRUD
 
             
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Menu().Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pemainID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void namaPemain_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void umurPemain_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void posisiPemain_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gajiPemain_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pemainBolaBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

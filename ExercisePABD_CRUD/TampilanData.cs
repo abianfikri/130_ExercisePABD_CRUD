@@ -21,7 +21,7 @@ namespace ExercisePABD_CRUD
         {
             this.Hide();
 
-            new Form1().Show();
+            new Menu().Show();
         }
     }
 }

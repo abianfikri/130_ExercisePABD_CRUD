@@ -30,6 +30,7 @@ namespace ExercisePABD_CRUD
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,9 +55,11 @@ namespace ExercisePABD_CRUD
             this.pemainBolaTableAdapter = new ExercisePABD_CRUD.CRUD_PABDDataSetTableAdapters.PemainBolaTableAdapter();
             this.label6 = new System.Windows.Forms.Label();
             this.tambah = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemainBolaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRUD_PABDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +70,7 @@ namespace ExercisePABD_CRUD
             this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Pemain";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -76,6 +80,7 @@ namespace ExercisePABD_CRUD
             this.label2.Size = new System.Drawing.Size(96, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nama Pemain";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -85,6 +90,7 @@ namespace ExercisePABD_CRUD
             this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Umur";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -94,6 +100,7 @@ namespace ExercisePABD_CRUD
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Posisi";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -103,6 +110,7 @@ namespace ExercisePABD_CRUD
             this.label5.Size = new System.Drawing.Size(33, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Gaji";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pemainID
             // 
@@ -110,6 +118,7 @@ namespace ExercisePABD_CRUD
             this.pemainID.Name = "pemainID";
             this.pemainID.Size = new System.Drawing.Size(236, 22);
             this.pemainID.TabIndex = 5;
+            this.pemainID.TextChanged += new System.EventHandler(this.pemainID_TextChanged);
             // 
             // namaPemain
             // 
@@ -117,6 +126,7 @@ namespace ExercisePABD_CRUD
             this.namaPemain.Name = "namaPemain";
             this.namaPemain.Size = new System.Drawing.Size(236, 22);
             this.namaPemain.TabIndex = 6;
+            this.namaPemain.TextChanged += new System.EventHandler(this.namaPemain_TextChanged);
             // 
             // umurPemain
             // 
@@ -124,6 +134,7 @@ namespace ExercisePABD_CRUD
             this.umurPemain.Name = "umurPemain";
             this.umurPemain.Size = new System.Drawing.Size(236, 22);
             this.umurPemain.TabIndex = 7;
+            this.umurPemain.TextChanged += new System.EventHandler(this.umurPemain_TextChanged);
             // 
             // posisiPemain
             // 
@@ -131,6 +142,7 @@ namespace ExercisePABD_CRUD
             this.posisiPemain.Name = "posisiPemain";
             this.posisiPemain.Size = new System.Drawing.Size(236, 22);
             this.posisiPemain.TabIndex = 8;
+            this.posisiPemain.TextChanged += new System.EventHandler(this.posisiPemain_TextChanged);
             // 
             // gajiPemain
             // 
@@ -138,6 +150,7 @@ namespace ExercisePABD_CRUD
             this.gajiPemain.Name = "gajiPemain";
             this.gajiPemain.Size = new System.Drawing.Size(236, 22);
             this.gajiPemain.TabIndex = 9;
+            this.gajiPemain.TextChanged += new System.EventHandler(this.gajiPemain_TextChanged);
             // 
             // save
             // 
@@ -232,6 +245,7 @@ namespace ExercisePABD_CRUD
             // 
             this.pemainBolaBindingSource.DataMember = "PemainBola";
             this.pemainBolaBindingSource.DataSource = this.cRUD_PABDDataSet;
+            this.pemainBolaBindingSource.CurrentChanged += new System.EventHandler(this.pemainBolaBindingSource_CurrentChanged);
             // 
             // cRUD_PABDDataSet
             // 
@@ -251,6 +265,7 @@ namespace ExercisePABD_CRUD
             this.label6.Size = new System.Drawing.Size(430, 30);
             this.label6.TabIndex = 14;
             this.label6.Text = "DATA PEMAIN BOLA SSB PLUTO";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // tambah
             // 
@@ -262,12 +277,25 @@ namespace ExercisePABD_CRUD
             this.tambah.UseVisualStyleBackColor = true;
             this.tambah.Click += new System.EventHandler(this.tambah_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tambah);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
@@ -290,6 +318,7 @@ namespace ExercisePABD_CRUD
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemainBolaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cRUD_PABDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,6 +350,7 @@ namespace ExercisePABD_CRUD
         private System.Windows.Forms.DataGridViewTextBoxColumn gajiDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button tambah;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
